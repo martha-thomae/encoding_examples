@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://music-encoding.org/schema/5.0/mei-all.rng" name="application/xml" schemanamens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://music-encoding.org/schema/5.0/mei-all.rng" name="application/xml" schemanamens="http://purl.oclc.org/dsdl/schematron"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" meiversion="5.0">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title>Ti ypermacho</title>
+            </titleStmt>
+            <pubStmt></pubStmt>
+        </fileDesc>
+    </meiHead>
+    <music>
+        <body>
+            <mdiv>
+                <score>
+                    <scoreDef>
+                        <staffGrp>
+                            <staffDef n="1" lines="1" visible="false"/>
+                        </staffGrp>
+                    </scoreDef>
+                    <section>
+                        <staff n="1">
+                            <layer n="1">
+                                <!-- Mode Signature: -->
+                                <modeSig xml:id="modesig000" mode.num="4" mode="plagal"
+                                    pname="c" fthora="true" genre="diatonic" nuance="soft"/>                        
+                                <!-- Syllables: -->
+                                <!-- Ti -->
+                                <syllable>
+                                    <syl>Ti</syl>
+                                    <neume xml:id="neume001" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="c"/>
+                                </syllable>
+                                <!-- Y-per-ma-cho -->
+                                <syllable>
+                                    <syl>Y-</syl>
+                                    <neume xml:id="neume002" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="c"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>per-</syl>
+                                    <neume xml:id="neume003" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="c"/>
+                                </syllable>
+                                <!-- there is a bar here: diastoli (indicates the beginning and end of a meter,
+                                     here is the beginning of the meter) this would be @func = metrical 
+                                     no divLine because it is not a pause, but <barLine> because it is metrical -->
+                                <syllable>
+                                    <syl>ma-</syl>
+                                    <neume xml:id="neume004" dur="4" intm="4" intmb="+3" pname="f">
+                                        <neume xml:id="neume005" func="melodic" name="oligon" pos="main"/>
+                                        <neume xml:id="neume006" func="melodic" name="kendima" pos="above"/>
+                                        <neume xml:id="neume007" func="dynamic/ornamental" name="psifiston" pos="below"/>
+                                    </neume>
+                                    <neume xml:id="neume008" func="melodic" name="apostrofos" dur="4" intm="-2" intmb="-1" pname="e"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>cho</syl>
+                                    <neume xml:id="neume009" dur="2" intm="-2" intmb="-1" pname="d">
+                                        <neume xml:id="neume010" func="melodic" name="apostrofos" pos="main"/>
+                                        <neume xml:id="neume011" func="temporal" name="klasma" pos="above"/>
+                                    </neume>
+                                </syllable>
+                                <!-- stra-ti-go ta -->
+                                <syllable>
+                                    <syl>stra-</syl>
+                                    <neume xml:id="neume012" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="d"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>ti-</syl>
+                                    <neume xml:id="neume013" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="d"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>go</syl>
+                                    <neume xml:id="neume014" dur="8" intm="+2" intmb="+1" pname="e" slur="i">
+                                        <neume xml:id="neume015" func="melodic" name="oligon" pos="main"/>
+                                        <neume xml:id="neume016" func="dynamic/ornamental" name="psifiston" pos="below"/>
+                                    </neume> 
+                                    <neume xml:id="neume017" func="melodic temporal" name="apostrofos-of-syneches-elafron" dur="8" intm="-2" intmb="-1" pname="d" slur="t"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>ta</syl>
+                                    <neume xml:id="neume018" func="melodic temporal" name="syneches-elafron" dur="4" intm="-2" intmb="-1" pname="c"/>
+                                </syllable>
+                                <formula type="syneches-elafron" startid="#neume014" endid="#neume018"/>
+                                <!-- ni-ki-ti-ri-a -->
+                                <syllable>
+                                    <syl>ni-</syl>
+                                    <neume xml:id="neume019" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="d"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>ki</syl>
+                                    <neume xml:id="neume020" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="e"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>ti-</syl>
+                                    <neume xml:id="neume021" func="melodic" name="ison" dur="8" intm="0" intmb="0" pname="e" slur="i"/>
+                                    <neume xml:id="neume022">
+                                        <neume xml:id="neume023" func="melodic" name="dyo-kendimata" dur="8" intm="+2" intmb="+1" pname="f" pos="below right" slur="m"/>
+                                        <neume xml:id="neume024" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="g" pos="main" slur="t"/>
+                                        <neume xml:id="neume025" func="temporal" name="gorgon" pos="above" effect="#neume021 #neume023"/>
+                                    </neume>
+                                    <formula type="with-gorgon" startid="#neume021" endid="#neume022"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>ri-</syl>
+                                    <neume xml:id="neume026" func="melodic" name="apostrofos" dur="8" intm="-2" intmb="-1" pname="f" slur="i"/>
+                                    <!-- should I group these into a single neume??? (like neume176)  -->
+                                    <neume xml:id="neume027" func="melodic" name="iporroi" pos="main">
+                                        <note xml:id="neume027-note001" intm="-2" intmb="-1" pname="e" dur="8" slur="m"/>
+                                        <note xml:id="neume027-note002"intm="-2" intmb="-1" pname="d" dur="4" slur="t"/>
+                                    </neume>
+                                    <neume xml:id="neume028" func="temporal" name="gorgon" pos="above" effect="#neume026 #neume027-note001"/>
+                                    <!-- until here? -->
+                                    <formula type="with-gorgon" startid="#neume026" endid="#neume027"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>a</syl>
+                                    <neume xml:id="neume029" dur="2" dots="1" intm="+2" intmb="+1" pname="e"><!-- dotted-half note -->
+                                        <neume xml:id="neume030" func="melodic" name="oligon" pos="main"/>
+                                        <neume xml:id="neume031" func="temporal" name="dipli" pos="below"/>
+                                    </neume>
+                                </syllable>
+                                <!-- Tone singature: Vu -->
+                                <toneSig xml:id="tonesig001" pname="e" register="middle" genre="diatonic" nuance="soft"/>
+                                <!-- Syllables: -->
+                                <!-- Os -->
+                                <syllable>
+                                    <syl>os</syl>
+                                    <neume xml:id="neume032" func="melodic" name="elafron" dur="4" intm="-3" intmb="-2" pname="c"/>
+                                </syllable>
+                                <!-- ly-tro-thi-sa -->
+                                <syllable>
+                                    <syl>ly-</syl>
+                                    <neume xml:id="neume033" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="c"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>tro-</syl>
+                                    <neume xml:id="neume034" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="c"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>thi-</syl>
+                                    <neume xml:id="neume035" dur="4" intm="4" intmb="+3" pname="f">
+                                        <neume xml:id="neume036" func="melodic" name="oligon" pos="main"/>
+                                        <neume xml:id="neume037" func="melodic" name="kendima" pos="above"/>
+                                        <neume xml:id="neume038" func="dynamic/ornamental" name="psifiston" pos="below"/>
+                                    </neume>
+                                    <neume xml:id="neume039" intm="-2" intmb="-1" name="apostrofos" pname="e"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>sa</syl>
+                                    <neume xml:id="neume040" dur="2" intm="-2" intmb="-1" pname="d">
+                                        <neume xml:id="neume041" func="melodic" name="apostrofos" pos="main"/>
+                                        <neume xml:id="neume042" func="temporal" name="klasma" pos="above"/>
+                                    </neume>
+                                </syllable>
+                                <!-- ton -->
+                                <syllable>
+                                    <syl>ton</syl>
+                                    <neume xml:id="neume043" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="d"/>
+                                </syllable>
+                                <!-- di-non -->
+                                <syllable>
+                                    <syl>di-</syl>
+                                    <neume xml:id="neume044" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="d"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>non</syl>
+                                    <neume xml:id="neume045" dur="8" intm="+2" intmb="+1" pname="e" slur="i">
+                                        <neume xml:id="neume046" func="melodic" name="oligon" pos="main"/>
+                                        <neume xml:id="neume047" func="dynamic/ornamental" name="psifiston" pos="below"/>
+                                    </neume> 
+                                    <neume xml:id="neume048" func="melodic" name="apostrofos-of-syneches-elafron" dur="8" intm="-2" intmb="-1" pname="d" slur="t"/>
+                                </syllable>
+                                <!-- ef-cha-ri-sti-ri-a-->
+                                <syllable>
+                                    <syl>ef</syl>
+                                    <neume xml:id="neume049" func="melodic" name="syneches-elafron" dur="4" intm="-2" intmb="-1" pname="c"/><!-- goes continously with the previous note -->
+                                </syllable>
+                                <formula type="syneches-elafron" startid="#neume045" endid="#neume049"/>
+                                <syllable>
+                                    <syl>cha-</syl>
+                                    <neume xml:id="neume050" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="d"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>ri-</syl>
+                                    <neume xml:id="neume051" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="e"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>sti-</syl>
+                                    <neume xml:id="neume052" func="melodic" name="ison" dur="8" intm="0" intmb="0" pname="e" slur="i"/>
+                                    <neume xml:id="neume053">
+                                        <neume xml:id="neume054" func="melodic" name="dyo-kendimata" dur="8" intm="+2" intmb="+1" pname="f" pos="below right" slur="m"/>
+                                        <neume xml:id="neume055" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="g" pos="main" slur="t"/>
+                                        <neume xml:id="neume056" func="temporal" name="gorgon" pos="above" effect="#neume052 #neume054"/>
+                                    </neume>
+                                    <formula type="with-gorgon" startid="#neume052" endid="#neume053"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>ri-</syl>
+                                    <neume xml:id="neume057" func="melodic" name="apostrofos" intm="-2" intmb="-1" pname="f" dur="8" slur="i"/>
+                                    <!-- should I group these into a single neume??? (like neume176) -->
+                                    <neume xml:id="neume058" func="melodic" name="iporroi" pos="main">
+                                        <note xml:id="neume058-note001" intmb="-1" pname="e" dur="8" slur="m"/>
+                                        <note xml:id="neume058-note002" intmb="-1" pname="d" dur="4" slur="t"/>
+                                    </neume>
+                                    <neume xml:id="neume059" func="temporal" name="gorgon" pos="above" effect="#neume057 #neume058-note001"/>
+                                    <!-- until here? -->
+                                    <formula type="with-gorgon" startid="#neume057" endid="#neume058"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>a</syl>
+                                    <neume xml:id="neume060" dur="2" intm="+2" intmb="+1" pname="e">
+                                        <neume xml:id="neume061" func="melodic" name="oligon" pos="main"/>
+                                        <neume xml:id="neume062" func="temporal" name="klasma" pos="above"/>
+                                    </neume>
+                                </syllable>
+                                <!-- Tone signature: Vu -->
+                                <toneSig xml:id="tonesig002" pname="e" register="middle" genre="diatonic" nuance="soft"/>
+                                <!-- a-na-gra-fo -->
+                                <syllable>
+                                    <syl>a-</syl>
+                                    <neume xml:id="neume063" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="e"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>na-</syl>
+                                    <neume xml:id="neume064" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="f"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>gra-</syl>
+                                    <neume xml:id="neume065" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="g"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>fo</syl>
+                                    <neume xml:id="neume066" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="g"/>
+                                </syllable>
+                                <!-- si -->
+                                <syllable>
+                                    <syl>si</syl>
+                                    <neume xml:id="neume067" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="g"/>
+                                </syllable>
+                                <!-- i -->
+                                <syllable>
+                                    <syl>i</syl>
+                                    <neume xml:id="neume068" func="melodic" name="apostrofos" dur="4" intm="-2" intmb="-1" pname="f"/>
+                                </syllable>
+                                <!-- po-lis -->
+                                <syllable>
+                                    <syl>po-</syl>
+                                    <neume xml:id="neume069" dur="2" intm="+2" intmb="+1" pname="g">
+                                        <neume xml:id="neume070" func="melodic" name="oligon" pos="main"/>
+                                        <neume xml:id="neume071" func="temporal" name="klasma" pos="above"/>
+                                    </neume>
+                                </syllable>
+                                <syllable>
+                                    <syl>lis</syl>
+                                    <neume xml:id="neume072" dur="8" intm="-4" intmb="-3" pname="d" slur="i">
+                                        <neume xml:id="neume073" func="melodic" name="elafron" pos="main"/>
+                                        <neume xml:id="neume074" func="melodic" name="apostrofos" pos="below"/>
+                                    </neume>
+                                    <neume xml:id="neume075" dur="8" intm="+2" intmb="+1" pname="e" slur="t">
+                                        <neume xml:id="neume076" func="melodic" name="dyo-kendimata" pos="main"/><!-- slurred with the previous note-->
+                                        <neume xml:id="neume077" func="temporal" name="gorgon" pos="below" effect="#neume072 #neume075"/>
+                                    </neume>
+                                    <formula type="with-gorgon" startid="#neume072" endid="#neume075"/>
+                                </syllable>
+                                <!-- sou -->
+                                <syllable>
+                                    <syl>sou</syl>
+                                    <neume xml:id="neume078" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="f"/>
+                                </syllable>
+                                <!-- The-o-to-ke, -->
+                                <syllable>
+                                    <syl>The-</syl>
+                                    <neume xml:id="neume079" dur="8" intm="-2" intmb="-1" pname="e" slur="i">
+                                        <neume xml:id="neume080" func="melodic" name="apostrofos" pos="main"/>
+                                        <neume xml:id="neume081" func="dynamic/ornamental" name="varia" pos="back left"/>
+                                    </neume>
+                                    <neume xml:id="neume082" func="melodic" name="apostrofos-of-syneches-elafron" dur="8" intm="-2" intmb="-1" pname="d" slur="t"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>o-</syl>
+                                    <neume xml:id="neume083" func="melodic" name="syneches-elafron" dur="4" intm="-2" intmb="-1" pname="c"/>
+                                </syllable>
+                                <formula type="syneches-elafron" startid="#neume079" endid="#neume083"/>
+                                <syllable>
+                                    <syl>to-</syl>
+                                    <neume xml:id="neume084">
+                                        <neume xml:id="neume085" func="melodic" name="oligon" pos="main" dur="4" intm="+2" intmb="+1" pname="d" slur="i"/>
+                                        <neume xml:id="neume086" func="melodic" name="dyo-kendimata" pos="above" dur="4" intm="+2" intmb="+1" pname="e" slur="t"/> 
+                                    </neume><!-- SO WHAT IS THE EFFECT OF THE dyo-kendimata OVER THE OLIGON, both are one voice above @intmb=+1
+                                    LEGATO WOULD BE THE EFFECT-->
+                                    <!-- ALWAYS WHEN HAVING TWO KENDIMATA THEY HAVE THEIR OWN INTERVAL OF +1 
+                                    AND THEY ARE SLURRED SOUNDS, THE STRONG SOUND THE OLIGON, AND THE WEAK ONE THE TWO KENDIMATA
+                                    THE TWO KENDIMATA NEVER GET THEIR OWN SYLLABLE, ONLY PROLONG WHAT HAPPENED BEFORE -->
+                                    
+                                    <!-- SO FOR THE ENCODING: JUST LEAVE THE TWO AT ONE LEVEL UP IN THE HIERARCHY AND ADD A "FORMULA" ELEMENT? OR HAVE BOTH AS CHILDREN OF ONE NEUME?  -->
+                                    <!-- BUT IT IS ONE SYMBOL MADE OF TWO THINGS: ONE ABOVE THE OTHER - TWO KENDIMATA ON TOP / BELOW OF MOSTLY OLIGON
+                                    SO, THEREFORE, ONE NEUME WITH TWO COMPONENTS? OR formula? -->
+                                </syllable>
+                                <syllable>
+                                    <syl>ke</syl>
+                                    <neume xml:id="neume087" dur="2" intm="-3" intmb="-2" pname="c">
+                                        <neume xml:id="neume088" func="melodic" name="elafron" pos="main"/>
+                                        <neume xml:id="neume089" func="temporal" name="klasma" pos="above"/>
+                                    </neume>
+                                </syllable>
+                                <!-- Tone signature: Ni -->
+                                <toneSig xml:id="tonesig003" pname="c" register="middle" genre="diatonic" nuance="soft"/>
+                                <!-- All' os e-chu-sa to kra-tos a-pros-ma-chi-ton, -->
+                                <!-- All' -->
+                                <syllable>
+                                    <syl>all</syl>
+                                    <neume xml:id="neume090" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="c"/>
+                                </syllable>
+                                <!-- os -->
+                                <syllable>
+                                    <syl>os</syl>
+                                    <neume xml:id="neume091" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="c"/>
+                                </syllable>
+                                <!-- e-chu-sa -->
+                                <syllable>
+                                    <syl>e-</syl>
+                                    <neume xml:id="neume092" dur="4" intm="4" intmb="+3" pname="f">
+                                        <neume xml:id="neume093" func="melodic" name="oligon" pos="main"/>
+                                        <neume xml:id="neume094" func="melodic" name="kendima" pos="above"/>
+                                        <neume xml:id="neume095" func="dynamic/ornamental" name="psifiston" pos="below"/>
+                                    </neume>
+                                    <neume xml:id="neume096" func="melodic" name="apostrofos" dur="4" intm="-2" intmb="-1" pname="e"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>chu-</syl>
+                                    <neume xml:id="neume097" dur="2" intm="-2" intmb="-1" pname="d">
+                                        <neume xml:id="neume098" func="melodic" name="apostrofos" pos="main"/>
+                                        <neume xml:id="neume099" func="temporal" name="klasma" pos="above"/>
+                                    </neume>
+                                </syllable>
+                                <syllable>
+                                    <syl>sa</syl>
+                                    <neume xml:id="neume100" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="d"/>
+                                </syllable>
+                                <!-- to -->
+                                <syllable>
+                                    <syl>to</syl>
+                                    <neume xml:id="neume101" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="d"/>
+                                </syllable>
+                                <!-- kra-tos -->
+                                <syllable>
+                                    <syl>kra-</syl>
+                                    <neume xml:id="neume102" dur="8" intm="+2" intm="+1" pname="e" slur="i">
+                                        <neume xml:id="neume103" func="melodic" name="oligon" pos="main"/>
+                                        <neume xml:id="neume104" func="dynamic/ornamental" name="psifiston" pos="below"/>
+                                    </neume>
+                                    <neume xml:id="neume105" func="melodic" name="apostrofos-of-syneches-elafron" dur="8" intm="-2" intmb="-1" pname="d" slur="t"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>tos</syl>
+                                    <neume xml:id="neume106" func="melodic" name="syneches-elafron" dur="4" intm="-2" intmb="-1" pname="c"/>
+                                </syllable>
+                                <formula type="syneches-elafron" startid="#neume102" endid="#neume106"/>
+                                <!-- a-pros-ma-chi-ton, -->
+                                <syllable>
+                                    <syl>a-</syl>
+                                    <neume xml:id="neume107" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="d"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>pros-</syl>
+                                    <neume xml:id="neume108" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="e"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>ma-</syl>
+                                    <neume xml:id="neume109" func="melodic" name="ison" dur="8" intm="0" intmb="0" pname="e" slur="i"/>
+                                    <neume xml:id="neume110">
+                                        <neume xml:id="neume111" func="melodic" name="dyo-kendimata" dur="8" intm="+2" intmb="+1" pname="f" pos="below right" slur="m"/>
+                                        <neume xml:id="neume112" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="g" pos="main" slur="t"/>
+                                        <neume xml:id="neume113" func="temporal" name="gorgon" pos="above" effect="#neume109 #neume111"/>
+                                    </neume>
+                                    <formula type="with-gorgon" startid="#neume109" endid="#neume110"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>chi-</syl>
+                                    <neume xml:id="neume114" func="melodic" name="apostrofos" dur="8" intm="-2" intmb="-1" pname="f" slur="i"/>
+                                    <!-- should I group these into a single neume??? (like neume176) -->
+                                    <neume xml:id="neume115" func="melodic" name="iporroi" pos="main">
+                                        <note xml:id="neume115-note001" dur="8" intm="-2" intmb="-1" pname="e" slur="m"/>
+                                        <note xml:id="neume115-note002" dur="4" intm="-2" intmb="-1" pname="d" slur="t"/>
+                                    </neume>
+                                    <neume xml:id="neume116" func="temporal" name="gorgon" pos="above" effect="#neume114 #neume115-note001"/>
+                                    <!-- until here? -->
+                                    <formula type="with-gorgon" starid="#neume114" endid="#neume115"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>ton</syl>
+                                    <neume xml:id="neume117" dur="2" intm="+2" intmb="+1" pname="e">
+                                        <neume xml:id="neume118" func="melodic" name="oligon" pos="main"/>
+                                        <neume xml:id="neume119" func="temporal" name="klasma" pos="above"/>
+                                    </neume>
+                                </syllable>
+                                <!-- Tone signature: Vu -->
+                                <toneSig xml:id="tonesig004" pname="e" register="middle" genre="diatonic" nuance="soft"/>
+                                <!-- Text: Ek pandion me kindinon eleftheroson -->
+                                <!-- Syllables: -->
+                                <!-- ek -->
+                                <syllable>
+                                    <syl>ek</syl>
+                                    <neume xml:id="neume120" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="e"/>
+                                </syllable>
+                                <!-- pan-di-on -->
+                                <syllable>
+                                    <syl>pan-</syl>
+                                    <neume xml:id="neume121" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="f"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>toi</syl>
+                                    <neume xml:id="neume122" func="melodic" name="oligon" dur="4" intm="+2" intmb="+1" pname="g"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>on</syl>
+                                    <neume xml:id="neume122" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="g"/>
+                                </syllable>
+                                <!-- me -->
+                                <syllable>
+                                    <syl>me</syl>
+                                    <neume xml:id="neume123" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="g"/>
+                                </syllable>
+                                <!-- kin-dy-non -->
+                                <syllable>
+                                    <syl>kin-</syl>
+                                    <neume xml:id="neume124" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="g"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>dy-</syl>
+                                    <neume xml:id="neume125" dur="4" intm="0" intmb="0" pname="g">
+                                        <neume xml:id="neume126" func="melodic" name="ison" pos="main"/>
+                                        <neume xml:id="neume127" func="dynamic/ornamental" name="psifiston" pos="below"/>
+                                    </neume>
+                                </syllable>
+                                <syllable>
+                                    <syl>non</syl>
+                                    <neume xml:id="neume128" func="melodic" name="apostrofos" dur="8" intm="-2" intmb="-1" pname="f" slur="i"/>
+                                    <neume xml:id="neume129" func="melodic" name="apostrofos-of-syneches-elafron" dur="8" intm="-2" intmb="-1" pname="e" slur="t"/>
+                                </syllable>
+                                <!-- e-lef-the-ro-son -->
+                                <syllable>
+                                    <syl>e-</syl>
+                                    <neume xml:id="neume130" func="melodic" name="syneches-elafron" dur="8" intm="-2" intmb="-1" pname="d" slur="i"/>
+                                    <neume xml:id="neume131" dur="8" intm="+2" intmb="+1" pname="e" slur="t"><!-- check on this one slur -->
+                                        <neume xml:id="neume132" func="melodic" name="dyo-kendimata" pos="main"/>
+                                        <neume xml:id="neume133" func="temporal" name="gorgon" pos="below" effect="#neume130 #neume131"/>
+                                    </neume>
+                                    <formula type="with-gorgon" startid="#neume130" endid="#neume131"/>
+                                </syllable><!-- OR JUST A SINGLE FORMULA INSTEAD COVERING THE RANGE OF THE TWO ??? -->
+                                <formula type="syneches-elafron" startid="#neume128" endid="#neume130"/>                 
+                                <syllable>
+                                    <syl>lef-</syl>
+                                    <neume xml:id="neume134" dur="4" intm="+2" intmb="+1" pname="f">
+                                        <neume xml:id="neume135" func="melodic" name="oligon" pos="main"/>
+                                        <neume xml:id="neume136" func="dynamic/ornamental" name="psifiston" pos="below"/>
+                                    </neume>
+                                </syllable>
+                                <syllable>
+                                    <syl>the-</syl>
+                                    <neume xml:id="neume137" func="melodic" name="apostrofos" dur="4" intm="-2" intmb="-1" pname="e"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>ro-</syl>
+                                    <neume xml:id="neume138" func="melodic" name="apostrofos" dur="4" intm="-2" intmb="-1" pname="d"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>son</syl>
+                                    <neume xml:id="neume139" dur="2" intm="-2" intmb="-1" pname="c">
+                                        <neume xml:id="neume140" func="melodic" name="apostrofos" pos="main"/>
+                                        <neume xml:id="neume141" func="temporal" name="klasma" pos="above"/>
+                                    </neume>
+                                </syllable>
+                                <!-- Tone signature: Ni -->
+                                <toneSig xml:id="tonesig005" pname="c" register="middle" genre="diatonic" nuance="soft"/>
+                                <!-- Text: Ina krasosi héré nymfi anymfété -->
+                                <!-- Syllables: -->
+                                <!-- i-na -->
+                                <syllable>
+                                    <syl>i-</syl>
+                                    <neume xml:id="neume142" dur="4" intm="+5" intmb="+4" pname="g">
+                                        <neume xml:id="neume143" func="melodic" type="oligon" pos="main"/>
+                                        <neume xml:id="neume144" func="melodic" type="ipsili" pos="above right"/>
+                                    </neume>
+                                </syllable>
+                                <syllable>
+                                    <syl>na</syl>
+                                    <neume xml:id="neume145" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="a"/>
+                                </syllable>
+                                <!-- kra-zo -->
+                                <syllable>
+                                    <syl>kra-</syl>
+                                    <neume xml:id="neume146" dur="2" intm="+4" intmb="+3" pname="c"><!--Upper one: cc-->
+                                        <neume xml:id="neume147" func="melodic" name="petasti" pos="main"/><!-- mordent -->
+                                        <neume xml:id="neume148" func="melodic" name="kendima" pos="above"/>
+                                        <neume xml:id="neume149" func="temporal" name="klasma" pos="below"/>
+                                    </neume>
+                                </syllable>
+                                <syllable>
+                                    <syl>zo</syl>
+                                    <neume xml:id="neume150" func="melodic" name="apostrofos" dur="4" intm="-2" intmb="-1" pname="b"/>
+                                    <neume xml:id="neume151" func="melodic" name="apostrofos" dur="4" intm="-2" intmb="-1" pname="a"/>
+                                </syllable>
+                                <!-- si -->
+                                <syllable>
+                                    <syl>si</syl>
+                                    <neume xml:id="neume152" dur="2" intm="-2" intmb="-1" pname="g">
+                                        <neume xml:id="neume153" func="melodic" name="apostrofos" pos="main"/>
+                                        <neume xml:id="neume154" func="temporal" name="klasma" pos="above"/>
+                                    </neume>
+                                </syllable>
+                                <!-- che-re -->
+                                <syllable>
+                                    <syl>che-</syl>
+                                    <neume xml:id="neume155" dur="4" intm="+3" intmb="+2" pname="b">
+                                        <neume xml:id="neume156" func="melodic" name="oligon" pos="main"/>
+                                        <neume xml:id="neume157" func="melodic" name="kendima" pos="below right"/>
+                                        <neume xml:id="neume158" func="dynamic/ornamental" name="psifiston" pos="bottom"/>
+                                        <accid accid="2twf" pos="above"/>
+                                    </neume>
+                                </syllable>
+                                <syllable>
+                                    <syl>re</syl>
+                                    <neume xml:id="neume159" func="melodic" name="apostrofos" dur="4" intm="-2" intmb="-1" pname="a"/>
+                                </syllable>
+                                <!-- nym-fi -->
+                                <syllable>
+                                    <syl>nym-</syl>
+                                    <neume xml:id="neume160" func="melodic" name="apostrofos" dur="4" intm="-2" intmb="-1" pname="g"/>
+                                    <neume xml:id="neume161" func="melodic" name="apostrofos" dur="4" intm="-2" intmb="-1" pname="f"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>fi</syl>
+                                    <neume xml:id="neume162" func="melodic" name="apostrofos" dur="4" intm="-2" intmb="-1" pname="e"/>
+                                </syllable>
+                                <!-- a-nym-fef-te -->
+                                <syllable>
+                                    <syl>a-</syl>
+                                    <neume xml:id="neume163" func="melodic" name="ison" dur="4" intm="0" intmb="0" pname="e"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>nym-</syl>
+                                    <neume xml:id="neume164" func="melodic" name="ison" dur="8" intm="0" intmb="0" pname="e" slur="i"/>
+                                    <neume xml:id="neume165">
+                                        <neume xml:id="neume166" func="melodic" name="dyo-kendimata" dur="8" intm="+2" intmb="+1" pname="f" pos="below right" slur="m"/>
+                                        <neume xml:id="neume167" func="melodic" name="oligon" dur="4" intm="+2" inmb="+1" pname="g" pos="main" slur="t"/>
+                                        <neume xml:id="neume168" func="temporal" name="gorgon" pos="above" effect="#neume164 #neume166"/>
+                                    </neume>
+                                    <formula type="with-gorgon" starid="#neume164" endid="#neume165"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>fef-</syl>
+                                    <neume xml:id="neume170" func="melodic" name="apostrofos" dur="8" intm="-2" intmb="-1" pname="f" slur="i"/>
+                                    <!-- should I group these into a single neume??? (like neume176) -->
+                                    <neume xml:id="neume171" func="melodic" name="iporroi" pos="main">
+                                        <note xml:id="neume171-note001" dur="8" intm="-2" intmb="-1" pname="e" slur="m"/>
+                                        <note xml:id="neume171-note002" dur="4" intm="-2" intmb="-1" pname="d" slur="t"/>
+                                    </neume>
+                                    <neume xml:id="neume172" name="gorgon" pos="above" effect="#neume170 #neume171-note001"/>
+                                    <!-- until here? -->
+                                    <formula type="with-gorgon" startid="#neume170" endid="#neume171"/>
+                                </syllable>
+                                <syllable>
+                                    <syl>te-</syl>
+                                    <neume xml:id="neume173" dur="4" dots="1" intm="0" intmb="0" pname="d" slur="i"><!--dotted quarter note-->
+                                        <neume xml:id="neume174" func="melodic" name="ison" pos="main"/>
+                                        <neume xml:id="neume175" func="temporal" name="klasma" pos="above"/>
+                                    </neume>
+                                    <neume xml:id="neume176">
+                                        <neume xml:id="neume177" func="melodic" name="iporroi" pos="main">
+                                            <note xml:id="neume177-note001" dur="8" intm="-2" intmb="-1" pname="c" slur="m"/>
+                                            <note xml:id="neume177-note002" dur="4" intm="-2" intmb="-1" pname="b" slur="t"/><!--lower note: B-->
+                                        </neume>
+                                        <neume xml:id="neume178" name="gorgon" pos="above" effect="#neume173 #neume177-note001"/>
+                                    </neume>
+                                    <neume xml:id="neume179" func="melodic" name="apostrofos" dur="8" intm="-2" intmb="-1" pname="a" slur="i"/>
+                                    <neume xml:id="neume180">
+                                        <neume xml:id="neume181" name="dyo-kendimata" dur="8" intm="+2" intmb="+1" pname="b" pos="below" slur="m"/>
+                                        <neume xml:id="neume182" name="oligon" dur="2" dots="1" intm="+2" intmb="+1" pname="c" pos="main" slur="t"/>
+                                        <neume xml:id="neume183" name="triimiargon" pos="above" effect="#neume179 #neume181 #neume182"/>
+                                        <!-- encoding order: is the reading order (interpretation of notes, the right rhythmic order) -->
+                                        <!-- main symbol is distinguished by @pos = center -->
+                                    </neume>
+                                    <formula type="with-argon" startid="#neume173" endid="#neume180"/>
+                                </syllable>
+                            </layer>
+                        </staff>
+                    </section>
+                </score>
+            </mdiv>
+        </body>
+    </music>
+</mei>
